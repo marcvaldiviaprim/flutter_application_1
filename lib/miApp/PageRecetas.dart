@@ -28,7 +28,7 @@ class _RecetaState extends State<Receta> {
   List cu = [];
   List pasos = [];
   bool selected = false;
-  List<bool> checkFalse = []; // creamos un array 
+  List<bool> checkFalse = []; // creamos un array
 
   Future<void> readJson() async {
     final String resultado = await rootBundle.loadString("assets/Recetas.json");
@@ -167,7 +167,8 @@ class _RecetaState extends State<Receta> {
                 physics: NeverScrollableScrollPhysics(),
                 itemCount: pasos.length,
                 itemBuilder: (BuildContext context, int index) {
-                  checkFalse[index]; // le pasamos el index es decir todas las posiciones para  utilizarlas 
+                  checkFalse[
+                      index]; // le pasamos el index es decir todas las posiciones para  utilizarlas
                   return Container(
                     padding: EdgeInsets.all(10),
                     child: Column(
@@ -175,17 +176,20 @@ class _RecetaState extends State<Receta> {
                         SizedBox(
                           width: 40,
                         ),
+                        Divider(thickness: 5,),
                         Text(
                           "  paso " + '${index + 1}\n' + pasos[index]["paso"],
                           textScaleFactor: 1.2,
                         ),
                         Checkbox(
                           checkColor: Colors.white,
-                          value: checkFalse[index], // recorremos el index para recoger un valor solo.  
+                          value: checkFalse[
+                              index], // recorremos el index para recoger un valor solo.
                           onChanged: (value) {
-                              setState(() {
-                                checkFalse[index] = !checkFalse[index]; // y cambiamos valor.
-                              }); 
+                            setState(() {
+                              checkFalse[index] =
+                                  !checkFalse[index]; // y cambiamos valor.
+                            });
                           },
                         ),
                       ],
