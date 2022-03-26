@@ -1,0 +1,329 @@
+{
+	"recetas": [
+		{
+			"imagen": "assets/PastelCalabacin.jpg",
+			"nombre": "Pastel de calabacín en el microondas",
+			"dificultad": "baja",
+			"tiempo": "15",
+			"ingredientes": [
+				{
+					"Nombre": "Calabacín",
+					"Cantidad": 2,
+					"tipo": ""
+				},
+				{
+					"Nombre": "Cebolla",
+					"Cantidad": 1,
+					"tipo": "ml"
+				},
+				{
+					"Nombre": "Sal",
+					"Cantidad": 1,
+					"tipo": "pizca"
+				},
+				{
+					"Nombre": "Nata para cocinar",
+					"Cantidad": 150,
+					"tipo": "ml"
+				},
+				{
+					"Nombre": "Queso Rallado",
+					"Cantidad": 50,
+					"tipo": "gr"
+				},
+				{
+					"Nombre": "Cucharadas soperas de aceite de oliva",
+					"Cantidad": 3,
+					"tipo": ""
+				},
+				{
+					"Nombre": "sal",
+					"Cantidad": 1,
+					"tipo": "pizca"
+				}
+			],
+			"Elaboracion": [
+				{
+					"paso": "Pela y pica la cebolla y lava los calabacines, \nlos cuales se pueden dejar con la piel o sin ella. Corta en rodajas finas el calabacín."
+				},
+				{
+					"paso": "Pon una sartén con unas cucharadas de aceite y añade la cebolla y el calabacín. Rehoga estas verduras hasta que queden pochadas. Si lo prefieres, también puedes añadir estos ingredientes en crudo a la masa y dejar que se cocinen en el microondas. De esta manera no quedarán tan blandas, pero es una opción mucho más rápida."
+				},
+				{
+					"paso": "Unta con mantequilla o aceite un molde apto para microondas. Nostros hemos utilizado un molde de cristal de unos 22 cm de diámetro."
+				},
+				{
+					"paso":"Bate los huevos con la nata en otro bol o en el mismo que vayas a usar para cocinar el pastel de calabacín al microondas"
+				},
+				{
+					"paso":"Añade parte del queso y un poco de sal y sigue batiendo."
+				},
+				{
+					"paso":"Añade las verduras pochadas e intégralas a la masa. Recuerda que también puedes agregar las verduras crudas, aunque cocinadas previamente aportan al pastel de calabacín al microondas un extra de sabor."
+				},
+				{
+					"paso":"Incorpora el resto del queso por encima de la mezcla para que quede un poco gratinado."
+				},
+				{
+					"paso": "Cocina el pastel de calabacín al microondas a 950 W durante 6 minutos. Mira cómo está pasado este tiempo, y si el centro aun está sin hacer déjalo 2 minutos más."
+				}
+
+			]
+		},
+		{
+			"imagen": "assets/dos.jpg",
+			"nombre": "Ensalada de tomate, sandía y queso",
+			"dificultad": "baja",
+			"tiempo": "25",
+			"ingredientes": [
+				{
+					"Nombre": "Sandia",
+					"Cantidad": 1,
+					"tipo": "kg"
+				},
+				{
+					"Nombre": "Queso feta",
+					"Cantidad": 150,
+					"tipo": "g"
+				},
+				{
+					"Nombre": "tomates cherry",
+					"Cantidad": 1,
+					"tipo": "mitad"
+				},
+				{
+					"Nombre": "tomate cherry",
+					"Cantidad": 10,
+					"tipo": ""
+				},
+				{
+					"Nombre": "Cúrcuma",
+					"Cantidad": 1,
+					"tipo":"molida"
+				},
+				{
+					"Nombre": "cebolla roja",
+					"Cantidad": 1,
+					"tipo": "mitad"
+				},
+				{
+					"Nombre": "hojas de menta",
+					"Cantidad": 10,
+					"tipo": ""
+				},
+				{
+					"Nombre": "cucharadas de aceite de oliva",
+					"Cantidad": 5,
+					"tipo": ""
+				},
+				{
+					"Nombre": "sal",
+					"Cantidad": 1,
+					"tipo": "pizca"
+				},
+				{
+					"Nombre": "pimienta",
+					"Cantidad": 1,
+					"tipo": "pizca"
+				}
+			],
+			"Elaboracion": [
+				{
+					"paso": "Cortar la sandía por la mitad y luego en cuartos delgados. Quitar la piel, cortarla en cubos. Lavar los tomates cherry y cortarlos en cuatro. En un bol, reservar la sandía y los tomates cherry."
+				},
+				{
+					"paso": "Luego cortar la mitad de la cebolla roja y el queso feta en pequeños cubos."
+				},
+				{
+					"paso": "Para condimentar, picar finamente la menta y mezclarla en un bol con el aceite de oliva y el vinagre de sidra. Sazonar con sal y pimienta."
+				},
+				{
+					"paso":"Mezclar todo en la ensaladera y mantener la ensalada en un lugar fresco antes de comerla."
+				}
+			]
+		},
+		{
+			"imagen": "assets/tres.jpg",
+			"nombre": "Crema básica de zanahoria",
+			"dificultad": "baja",
+			"tiempo": "30",
+			"ingredientes": [
+				{
+					"Nombre": "Cebolla grande",
+					"Cantidad": 1,
+					"tipo": ""
+				},
+				{
+					"Nombre": "Zanahoria mediana",
+					"Cantidad": 7,
+					"tipo": ""
+				},
+				{
+					"Nombre": "Caldo de verduras",
+					"Cantidad": 1,
+					"tipo": "l"
+				},
+				{
+					"Nombre": "Nata líquida para cocinar",
+					"Cantidad": 150,
+					"tipo": "ml"
+				},
+				{
+					"Nombre": "sal",
+					"Cantidad": 1,
+					"tipo":"pizca"
+				},
+				{
+					"Nombre": "cebolla roja",
+					"Cantidad": 1,
+					"tipo": "mitad"
+				},
+				{
+					"Nombre": "Pimienta blanca molida",
+					"Cantidad": 1,
+					"tipo": "pizca"
+				},
+				{
+					"Nombre": "Aceite de oliva virgen extra",
+					"Cantidad": 1,
+					"tipo": "pizca"
+				}
+			],
+			"Elaboracion": [
+				{
+					"paso": "Pela la cebolla, córtala por la mitad y después en lunas."
+				},
+				{
+					"paso": "En la olla en la que vayas a preparar la crema echa un chorrito de aceite y ponla a fuego medio. Cuando el aceite esté caliente incorpora la cebolla junto con un poco de sal y cocínala durante 5 minutos. Si ves que se dora enseguida baja un poco la temperatura del fuego."
+				},
+				{
+					"paso": "Córtale al puerro las raíces y también la parte más verde, además de quitarle la capa más externa. Córtalo por la mitad y en rodajas o directamente en rodajas. Te recomiendo no tirar la parte verde de los puerros ya que aunque no se utiliza en esta receta, te vendrá genial para preparar un caldo de verduras o incluso un caldo de pollo, siempre bien limpia (a veces tiene tierra entre las primeras capas)."
+				},
+				{
+					"paso":"Incorpora el puerro a la olla cuando la cebolla lleve esos 5 minutos cocinándose, mézclalo todo bien y sigue cocinando 3 o 4 minutos más."
+				},
+				{
+					"paso":"Mientras, pela las zanahorias con un buen pelador y córtalas en rodajas, que no sean muy gruesas para que se cocinen pronto pero tampoco hace falta que sean muy finas ya que después lo trituraremos todo."
+				},
+				{
+					"paso":"Pela la patata, córtala en 4 partes y cada parte en rodajas. Añádela a la olla en cuanto la tengas lista, mézclalo todo bien y cocina 3 o 4 minutos más."
+				},
+				{
+					"paso": "Echa el caldo de verduras en la olla o agua, siendo la cantidad ideal la que cubre justita la verdura para que después nos quede una crema con buena textura y no demasiado líquida."
+				},
+				{
+					"paso": "Si has echado caldo no eches más sal ya que habrá tiempo de rectificar después, pero si añades agua puedes incorporar ahora un poco de agua. Lo que si le echo ahora es un poco de pimienta negra recién molida, aunque esto ya va en gustos."
+				},
+				{
+					"paso": "Pon el fuego a temperatura alta para que el líquido empiece a hervir. Cuando eso ocurra baja el fuego para que esté suave, tapa la olla y deja que se cocinen unos 25-30 minutos, hasta que las verduras estén tiernas. Cuando lleven 25 minutos puedes destapar la olla y pinchar zanahoria y patata para comprobar si están tiernas."
+				},
+				{
+					"paso": "Retira la olla del fuego y tritura la crema, ya sea con una batidora de mano directamente en la olla (siempre y cuando tu olla no tenga recubrimiento antiadherente ya que lo estropearías) o bien pasarlo de la olla a una batidora de vaso o robot."
+				},
+				{
+					"paso":"Tritura la mezcla hasta que tenga la textura que más te guste, ya que hay quien la prefiere grumosa o bien cremosa (a mi me encanta bien cremosa y sin grumos). Si te queda muy espesa puedes añadirle más agua o caldo y triturar de nuevo hasta dar con la textura que buscas"
+				}
+				
+
+
+			]
+		},
+		{
+			"imagen": "assets/cuatro.jpg",
+			"nombre": "Arroz estilo chaufa",
+			"dificultad": "alta",
+			"tiempo": "30",
+			"ingredientes": [
+				{
+					"Nombre": "Arroz",
+					"Cantidad": 450,
+					"tipo": "g"
+				},
+				{
+					"Nombre": "Pechuga de pollo",
+					"Cantidad": 250,
+					"tipo": "g"
+				},
+				{
+					"Nombre": "Huevos",
+					"Cantidad": 2,
+					"tipo": ""
+				},
+				{
+					"Nombre": "Cebolla fresca",
+					"Cantidad": 1,
+					"tipo": ""
+				},
+				{
+					"Nombre": "Pimiento rojo",
+					"Cantidad": 1,
+					"tipo":""
+				},
+				{
+					"Nombre": "Jengibre rallado",
+					"Cantidad": 1,
+					"tipo": "cucharada"
+				},
+				{
+					"Nombre": "Salsa de soja",
+					"Cantidad": 6,
+					"tipo": "cucharada"
+				},
+				{
+					"Nombre": "Cebollino picado",
+					"Cantidad": 1,
+					"tipo": "pizca"
+				},
+				{
+					"Nombre": "Caldo de pollo",
+					"Cantidad": 2,
+					"tipo": "cucharadas"
+				},
+				{
+					"Nombre": "Aceite de oliva virgen extra",
+					"Cantidad": 60,
+					"tipo": "ml"
+				},
+				{
+					"Nombre": "Pimienta",
+					"Cantidad": 1,
+					"tipo": "pizca"
+				},
+				{
+					"Nombre": "Agua ",
+					"Cantidad": 900,
+					"tipo": "ml"
+				},
+				{
+					"Nombre": "Caldo de pollo",
+					"Cantidad": 60,
+					"tipo": "ml"
+				}
+
+
+			],
+			"Elaboracion": [
+				{
+					"paso": "Cocemos el arroz en 900 ml de agua, durante 15 minutos. Una vez que pase el tiempo de cocción, apagar el fuego y tapar el recipiente con un paño."
+					
+				},
+				{
+					"paso": "Dejar reposar 5 minutos y reservar. Mientras batir los huevos, añadir un poco de aceite de oliva y verter los huevos. Dejar que cuajen. Una vez tenemos la tortilla la cortamos en tiras."
+					
+				},
+				{
+					"paso": "Cortar la cebolla fresca y los pimientos y sofreír en el mismo aceite que la tortilla o si hace falta añadir un poco más. Añadir los trozos de pollo y dorar, a continuación el jengibre rallado."
+					
+				},
+				{
+					"paso":"Hay quien añade en este paso glutamato monosódico que es un condimento que se usa en la comida china para potenciar sabores, pero no a todo el mundo le sienta bien. Está descrito que puede provocar, el famoso ‘síndrome del restaurante chino’ por ejemplo dar dolor de cabeza. Se puede preparar este arroz chaufa sin usar glutamato, solo que en muchos restaurantes lo usan y lo puedes encontrar si lo deseas en cualquier gran supeficie."
+					
+				},
+				{
+					"paso":"Una vez tenemos el pollo sofrito y el pimiento lo añadiremos al arroz que teníamos reservado junto a dos cucharadas de salsa de soja. Sofreír todos los ingredientes durante un par de minutos, agregar las tiras de huevo, y un par de cucharadas de caldo de pollo para que no se reseque demasiado. Sal no añadimos ya que la soja es muy salada, si acaso puedes agregar un poco de zumo de limón."
+					
+				}
+			]
+		}
+	]
+}
