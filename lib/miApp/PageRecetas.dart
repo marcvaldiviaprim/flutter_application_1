@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'miApp.dart';
 
@@ -16,7 +17,7 @@ class Receta extends StatefulWidget {
 
   Receta(
     this.index,
-  );
+  ); // recogemos el index que le pasamos de miApp
 
   @override
   State<Receta> createState() => _RecetaState();
@@ -30,7 +31,8 @@ class _RecetaState extends State<Receta> {
   List<bool> checkFalse = []; // creamos un array
 
   Future<void> readJson() async {
-    final String resultado = await rootBundle.loadString("assets/Recetas.json");
+    final String resultado =
+        await rootBundle.loadString("assets/Recetas.json"); // cargamos el Json
     final data = await jsonDecode(resultado);
     setState(() {
       recetas = data["recetas"];
@@ -72,7 +74,6 @@ class _RecetaState extends State<Receta> {
               child: Column(
                 children: [
                   Padding(padding: EdgeInsets.all(1)),
-                  Image.asset(recetas[widget.index]["imagen"]),
                   ListTile(
                     title: Text(
                       recetas[widget.index]["nombre"],
@@ -80,6 +81,7 @@ class _RecetaState extends State<Receta> {
                     subtitle: Text(
                         "Dificultad: " + recetas[widget.index]["dificultad"]),
                   ),
+                  Image.asset(recetas[widget.index]["imagen"]),
                   Column(
                     children: [
                       ListTile(
@@ -104,7 +106,12 @@ class _RecetaState extends State<Receta> {
                             icon: Icon(Icons.remove),
                           ),
                           Text('Para ${totals} '),
-                          Icon(Icons.person)
+                          Icon(Icons.person),
+                            RaisedButton(
+                            child: Text("CURSOS EN LINEA"),
+                              onPressed: (){
+                            launch("https://es.wikipedia.org/wiki/Ma%C3%ADz_dulce"); // crear json para link
+                          }),
                         ],
                       ),
                     ],
@@ -166,7 +173,8 @@ class _RecetaState extends State<Receta> {
                 physics: NeverScrollableScrollPhysics(),
                 itemCount: pasos.length,
                 itemBuilder: (BuildContext context, int index) {
-                  checkFalse[index]; // le pasamos el index es decir todas las posiciones para  utilizarlas
+                  checkFalse[
+                      index]; // le pasamos el index es decir todas las posiciones para  utilizarlas
                   return Container(
                     padding: EdgeInsets.all(10),
                     child: Column(
@@ -174,10 +182,11 @@ class _RecetaState extends State<Receta> {
                         SizedBox(
                           width: 40,
                         ),
-                        Divider(thickness: 5,),
+                        Divider(
+                          thickness: 5,
+                        ),
                         Text(
                           "  paso " + '${index + 1}\n' + pasos[index]["paso"],
-                          
                           textScaleFactor: 1.2,
                         ),
                         Checkbox(
@@ -199,5 +208,6 @@ class _RecetaState extends State<Receta> {
         ],
       )),
     );
+    
   }
 }
