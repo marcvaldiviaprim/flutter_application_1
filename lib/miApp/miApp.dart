@@ -7,6 +7,7 @@ import 'PageRecetas.dart';
 
 
  bool cambio =false;
+
 class miApp extends StatelessWidget {
   
   const miApp({Key? key}) : super(key: key);
@@ -14,7 +15,7 @@ class miApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp( 
-      title: "App de rectas",     
+      title: "App de rectas", 
       debugShowCheckedModeBanner: false,
       color: Colors.red,
       home: inicio(),
@@ -22,20 +23,25 @@ class miApp extends StatelessWidget {
   }
 }
 
-_theme(cambio) {
-  debugPrint("----------"+cambio.toString());
-  }
-
 
 class inicio extends StatefulWidget {
   inicio({Key? key}) : super(key: key);
-   
-
+ 
   @override
   State<inicio> createState() => _inicioState();
 }
 
 class _inicioState extends State<inicio> {
+    
+ bool _isDark = false;
+  ThemeData _light = ThemeData.light().copyWith(
+    primaryColor: Colors.green,
+  );
+  ThemeData _dark = ThemeData.dark().copyWith(
+    primaryColor: Colors.blueGrey,
+  );
+     
+
 
   List recetas = [];
   Future<void> readJson() async {
@@ -51,20 +57,31 @@ class _inicioState extends State<inicio> {
   Widget build(BuildContext context) {
     readJson();
 
-    return Scaffold(
+    return MaterialApp(
+       darkTheme: _dark,
+      theme: _light,
+      themeMode: _isDark ? ThemeMode.dark : ThemeMode.light,      
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
       appBar: AppBar(
         title: Text("Recetas"),
         actions: [
-          IconButton(onPressed:(){
-              cambio =! cambio;
-          _theme(cambio);
-            debugPrint(cambio.toString());
-          }, icon: Icon(Icons.accessible_forward_rounded) ,)          
+      
+            CupertinoSwitch(
+                  value: _isDark,
+                  onChanged: (v) {
+                    setState(() {
+                      _isDark = !_isDark;
+                    });
+                  },
+                ),         
         ],
         
       ),
+   
       body: Column(
         children: [
+          
           if (recetas.isNotEmpty)
             Expanded(
               child: ListView.builder(
@@ -102,6 +119,7 @@ class _inicioState extends State<inicio> {
             )
         ],
       ),
+      )
     );
   }
   

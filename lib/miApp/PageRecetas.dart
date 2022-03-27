@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'dart:convert';
-import 'dart:developer';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -162,13 +161,12 @@ class _RecetaState extends State<Receta> {
                 ],
               )),
           Container(
-              height: 800,
+              height: 2000,
               child: ListView.builder(
                 physics: NeverScrollableScrollPhysics(),
                 itemCount: pasos.length,
                 itemBuilder: (BuildContext context, int index) {
-                  checkFalse[
-                      index]; // le pasamos el index es decir todas las posiciones para  utilizarlas
+                  checkFalse[index]; // le pasamos el index es decir todas las posiciones para  utilizarlas
                   return Container(
                     padding: EdgeInsets.all(10),
                     child: Column(
@@ -179,6 +177,7 @@ class _RecetaState extends State<Receta> {
                         Divider(thickness: 5,),
                         Text(
                           "  paso " + '${index + 1}\n' + pasos[index]["paso"],
+                          
                           textScaleFactor: 1.2,
                         ),
                         Checkbox(
