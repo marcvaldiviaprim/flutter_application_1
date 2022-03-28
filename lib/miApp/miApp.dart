@@ -3,9 +3,10 @@ import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'PageRecetas.dart';
 
-
+ bool _isDark = false;
  bool cambio =false;
 
 class miApp extends StatelessWidget {
@@ -33,7 +34,7 @@ class inicio extends StatefulWidget {
 
 class _inicioState extends State<inicio> {
     
- bool _isDark = false;
+
   ThemeData _light = ThemeData.light().copyWith(
     primaryColor: Colors.green,
   );
@@ -63,7 +64,10 @@ class _inicioState extends State<inicio> {
       themeMode: _isDark ? ThemeMode.dark : ThemeMode.light,      
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+      
       appBar: AppBar(
+        backgroundColor: Colors.green[400],
+    
         title: Text("Recetas"),
         actions: [
       
@@ -88,9 +92,12 @@ class _inicioState extends State<inicio> {
                   itemCount: recetas.length,
                   itemBuilder: (context, index) {
                     return Card(
-
-                      margin: EdgeInsets.all(50),                       
+                      color: Colors.green[400],
+                      shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)),
+                      margin: EdgeInsets.fromLTRB(40, 15, 40, 0),                       
                       child: InkWell(
+                           splashColor: Colors.blue[200],
                         onTap: () {
                         final router = MaterialPageRoute(
                           builder:(context){
@@ -107,13 +114,14 @@ class _inicioState extends State<inicio> {
                             ),
                             Column(
                               children: [
-                                Image.asset(recetas[index]["imagen"]),
+                                
+                                Image.asset(recetas[index]["imagen"],),                                
                               ],
-                            )
+                            ),
+                            
                           ],
                         ),
                       ),
-                      
                     );
                   }),
             )

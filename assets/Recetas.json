@@ -5,41 +5,44 @@
 			"nombre": "Pastel de calabacín en el microondas",
 			"dificultad": "baja",
 			"tiempo": "15",
+
 			"ingredientes": [
 				{
 					"Nombre": "Calabacín",
 					"Cantidad": 2,
-					"tipo": ""
+					"tipo": "",
+					"link":"https://www.naturitas.es/p/frescos/fruta-y-verdura/calabacin-bio-500-g-hawo-fruits?q=Calabac%C3%ADn"
+					
 				},
 				{
 					"Nombre": "Cebolla",
 					"Cantidad": 1,
-					"tipo": "ml"
+					"tipo": "ml",
+					"link":"https://www.naturitas.es/p/frescos/fruta-y-verdura/cebolla-bio-1-kg-hawo-fruits"
 				},
 				{
 					"Nombre": "Sal",
 					"Cantidad": 1,
-					"tipo": "pizca"
+					"tipo": "pizca",
+					"link":"https://www.naturitas.es/p/alimentacion/aceites-y-condimentos/sales/sal-marina-fina-ecologica-1-kg-el-granero-integral"
 				},
 				{
 					"Nombre": "Nata para cocinar",
 					"Cantidad": 150,
-					"tipo": "ml"
+					"tipo": "ml",
+					"link":"https://www.naturitas.es/p/alimentacion/aceites-y-condimentos/sales/sal-marina-fina-ecologica-1-kg-el-granero-integral?"
 				},
 				{
 					"Nombre": "Queso Rallado",
 					"Cantidad": 50,
-					"tipo": "gr"
+					"tipo": "gr",
+					"link":"https://www.naturitas.es/p/frescos/proteina-vegetal/rallado-vegano-sabor-queso-original-200-g-violife"
 				},
 				{
 					"Nombre": "Cucharadas soperas de aceite de oliva",
 					"Cantidad": 3,
-					"tipo": ""
-				},
-				{
-					"Nombre": "sal",
-					"Cantidad": 1,
-					"tipo": "pizca"
+					"tipo": "",
+					"link":"https://www.naturitas.es/p/alimentacion/aceites-y-condimentos/aceites-y-vinagres/aceite-de-oliva-virgen-extra-arbequina-075-l-de-aceite-biocop"
 				}
 			],
 			"Elaboracion": [
@@ -79,52 +82,56 @@
 				{
 					"Nombre": "Sandia",
 					"Cantidad": 1,
-					"tipo": "kg"
+					"tipo": "kg",
+					"link":"https://www.naturitas.es/p/frescos/fruta-y-verdura/sandia-bio-2-kg-aprox-hawo-fruits"
 				},
 				{
 					"Nombre": "Queso feta",
 					"Cantidad": 150,
-					"tipo": "g"
-				},
-				{
-					"Nombre": "tomates cherry",
-					"Cantidad": 1,
-					"tipo": "mitad"
+					"tipo": "g",
+					"link":"https://www.naturitas.es/p/frescos/lacteos/queso-feta-organico-envejecido-en-barril-150-g-kourellas"
 				},
 				{
 					"Nombre": "tomate cherry",
 					"Cantidad": 10,
-					"tipo": ""
+					"tipo": "",
+					"link":"https://www.naturitas.es/p/frescos/fruta-y-verdura/tomate-cherry-pera-bio-250-g-hawo-fruits"
 				},
 				{
 					"Nombre": "Cúrcuma",
 					"Cantidad": 1,
-					"tipo":"molida"
+					"tipo":"molida",
+					"link":"https://www.naturitas.es/p/suplementos/fitoterapia/curcuma/curcuma-200-g-de-polvo-biotona"
 				},
 				{
 					"Nombre": "cebolla roja",
 					"Cantidad": 1,
-					"tipo": "mitad"
+					"tipo": "mitad",
+					"link":"https://mediterraneanbox.com/producto/cebolla-roja/?utm_source=Google%20Shopping&utm_campaign=Copy%20Productos&utm_medium=cpc&utm_term=4072&gclid=CjwKCAjwuYWSBhByEiwAKd_n_qnJVuOJHpv9YkzD0X5LorUTR0YnL7WRrXe6nlo4i_QOshUglMOHZRoC79wQAvD_BwE"
 				},
 				{
 					"Nombre": "hojas de menta",
 					"Cantidad": 10,
-					"tipo": ""
+					"tipo": "",
+					"link":"https://www.naturitas.es/p/suplementos/fitoterapia/menta/hierba-de-menta-piperita-hoja-25-g-plameca"
 				},
 				{
 					"Nombre": "cucharadas de aceite de oliva",
 					"Cantidad": 5,
-					"tipo": ""
+					"tipo": "",
+					"link":"https://www.miaceiteadomicilio.com/comprar-aceite-de-oliva-virgen-extra/packs/pack-oferta-12l-aceite-de-oliva-virgen-extra/"
 				},
 				{
 					"Nombre": "sal",
 					"Cantidad": 1,
-					"tipo": "pizca"
+					"tipo": "pizca",
+					"link":"https://www.naturitas.es/p/alimentacion/aceites-y-condimentos/sales/sal-marina-fina-ecologica-1-kg-el-granero-integral"
 				},
 				{
 					"Nombre": "pimienta",
 					"Cantidad": 1,
-					"tipo": "pizca"
+					"tipo": "pizca",
+					"link":"https://www.amazon.es/pimienta-negra/s?k=pimienta+negra"
 				}
 			],
 			"Elaboracion": [
@@ -151,42 +158,50 @@
 				{
 					"Nombre": "Cebolla grande",
 					"Cantidad": 1,
-					"tipo": ""
+					"tipo": "",
+					"link":"https://www.naturitas.es/p/frescos/fruta-y-verdura/cebolla-bio-1-kg-hawo-fruits"
 				},
 				{
 					"Nombre": "Zanahoria mediana",
 					"Cantidad": 7,
-					"tipo": ""
+					"tipo": "",
+					"link":"https://www.amazon.es/Cesta-verduras-huerta-Valencia-Zanahoria/dp/B09V33CGH9/ref=sr_1_6?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&keywords=Zanahoria&qid=1648487814&sr=8-6"
 				},
 				{
 					"Nombre": "Caldo de verduras",
 					"Cantidad": 1,
-					"tipo": "l"
+					"tipo": "l",
+					"link":"https://www.elcorteingles.es/supermercado/0110118002002691-gallina-blanca-caldo-de-verduras-casero-100-natural-envase-1-l/"
 				},
 				{
 					"Nombre": "Nata líquida para cocinar",
 					"Cantidad": 150,
-					"tipo": "ml"
+					"tipo": "ml",
+					"link":"https://www.centrallecheraasturiana.es/productos/nata/nata-para-cocinar/nata-1l/"
 				},
 				{
 					"Nombre": "sal",
 					"Cantidad": 1,
-					"tipo":"pizca"
+					"tipo":"pizca",
+					"link":"https://www.naturitas.es/p/alimentacion/aceites-y-condimentos/sales/sal-marina-fina-ecologica-1-kg-el-granero-integral"
 				},
 				{
 					"Nombre": "cebolla roja",
 					"Cantidad": 1,
-					"tipo": "mitad"
+					"tipo": "mitad",
+					"link":"https://www.amazon.es/Semillas-Hort%C3%ADcolas-Cebolla-Zalla-Batlle/dp/B00KM2BNRU/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=TUURFA87O977&keywords=cebolla+roja&qid=1648487847&sprefix=cebolla+roja%2Caps%2C106&sr=8-1"
 				},
 				{
 					"Nombre": "Pimienta blanca molida",
 					"Cantidad": 1,
-					"tipo": "pizca"
+					"tipo": "pizca",
+					"link":"https://www.amazon.es/Pimienta-pimienta-natural-supuesto-aditivos/dp/B08LTDTQW9/ref=sr_1_1_sspa?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1BS3RWN5JWH02&keywords=Pimienta+blanca+molida&qid=1648487869&sprefix=pimienta+blanca+molida%2Caps%2C124&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEyWUhRWTZYR0hRMzkmZW5jcnlwdGVkSWQ9QTA1NTk5OTFZNEY3SUY0TjRDTDAmZW5jcnlwdGVkQWRJZD1BMDMxODczMDJHVk9YNkxZV0ExSEImd2lkZ2V0TmFtZT1zcF9hdGYmYWN0aW9uPWNsaWNrUmVkaXJlY3QmZG9Ob3RMb2dDbGljaz10cnVl"
 				},
 				{
 					"Nombre": "Aceite de oliva virgen extra",
 					"Cantidad": 1,
-					"tipo": "pizca"
+					"tipo": "pizca",
+					"link":"https://www.naturitas.es/p/alimentacion/aceites-y-condimentos/aceites-y-vinagres/aceite-de-oliva-virgen-extra-arbequina-075-l-de-aceite-biocop"
 				}
 			],
 			"Elaboracion": [
@@ -237,67 +252,74 @@
 				{
 					"Nombre": "Arroz",
 					"Cantidad": 450,
-					"tipo": "g"
+					"tipo": "g",
+					"link":"https://www.hipercor.es/supermercado/0110118005700614-sos-arroz-redondo-paquete-1-kg/"
 				},
 				{
 					"Nombre": "Pechuga de pollo",
 					"Cantidad": 250,
-					"tipo": "g"
+					"tipo": "g",
+					"link":"https://www.lavacaquesi.com/producto/pechuga-pollo/?gclid=CjwKCAjwuYWSBhByEiwAKd_n_mKJ-PlVMppgv3_A0ZvmU4BEryGvvwZfFRgwFQp-hgbjVTUDurx41hoC4hQQAvD_BwE"
 				},
 				{
 					"Nombre": "Huevos",
 					"Cantidad": 2,
-					"tipo": ""
+					"tipo": "",
+					"link":"https://www.planetahuerto.es/venta-6x-huevos-ecologicos-planeta-huerto_168919?gclid=CjwKCAjwuYWSBhByEiwAKd_n_tpuDp27sXk9pAB38h4FRCWBdT0CFasC1PZUuxIAswl_Q3R-kd3NNRoCASgQAvD_BwE"
 				},
 				{
 					"Nombre": "Cebolla fresca",
 					"Cantidad": 1,
-					"tipo": ""
+					"tipo": "",
+					"link":"https://www.naturitas.es/p/frescos/fruta-y-verdura/cebolla-bio-1-kg-hawo-fruits"
 				},
 				{
 					"Nombre": "Pimiento rojo",
 					"Cantidad": 1,
-					"tipo":""
+					"tipo":"",
+					"link":"https://www.dia.es/compra-online/frescos/verduras-y-hortalizas/tomates-pimientos-y-pepinos/p/74"
 				},
 				{
 					"Nombre": "Jengibre rallado",
 					"Cantidad": 1,
-					"tipo": "cucharada"
+					"tipo": "cucharada",
+					"link":"https://rootstudio.es/mercadona/jengibre-rallado/"
 				},
 				{
 					"Nombre": "Salsa de soja",
 					"Cantidad": 6,
-					"tipo": "cucharada"
+					"tipo": "cucharada",
+					"link":"https://www.amazon.es/Kikkoman-Salsa-Soja-Oscura-1000/dp/B005E9VL28"
 				},
 				{
 					"Nombre": "Cebollino picado",
 					"Cantidad": 1,
-					"tipo": "pizca"
+					"tipo": "pizca",
+					"link":"https://www.missupermercados.com/comprar/cebollino-fresco-varios-bandeja-20-g-pid-67505620.html"
 				},
 				{
 					"Nombre": "Caldo de pollo",
 					"Cantidad": 2,
-					"tipo": "cucharadas"
+					"tipo": "cucharadas",
+					"link":"https://www.hipercor.es/supermercado/0110118002002667-gallina-blanca-caldo-de-pollo-casero-100-natural-sin-gluten-pack-2-envases-1-l/"
 				},
 				{
 					"Nombre": "Aceite de oliva virgen extra",
 					"Cantidad": 60,
-					"tipo": "ml"
+					"tipo": "ml",
+					"link":"https://www.naturitas.es/p/alimentacion/aceites-y-condimentos/aceites-y-vinagres/aceite-de-oliva-virgen-extra-arbequina-075-l-de-aceite-biocop"
 				},
 				{
 					"Nombre": "Pimienta",
 					"Cantidad": 1,
-					"tipo": "pizca"
+					"tipo": "pizca",
+					"link":"https://www.koro-shop.es/pimienta-negra-en-grano-1-kg?utm_term=&utm_campaign=Google+Shopping+-+Spain&utm_source=adwords&utm_medium=ppc&hsa_acc=8966015506&hsa_cam=12783120206&hsa_grp=126431536932&hsa_ad=515609581568&hsa_src=u&hsa_tgt=pla-293946777986&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAjwuYWSBhByEiwAKd_n_kK2ujbpcRytTfEFriGaE2gPk_olJncSyDTeSyjDlfULzf1cXaGRaRoC5doQAvD_BwE"
 				},
 				{
-					"Nombre": "Agua ",
+					"Nombre": "Agua",
 					"Cantidad": 900,
-					"tipo": "ml"
-				},
-				{
-					"Nombre": "Caldo de pollo",
-					"Cantidad": 60,
-					"tipo": "ml"
+					"tipo": "ml",
+					"link":""
 				}
 
 

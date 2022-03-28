@@ -51,6 +51,7 @@ class _RecetaState extends State<Receta> {
       appBar: AppBar(
         centerTitle: true,
         title: Text(titulo),
+        backgroundColor: Colors.green[400],
         actions: [
           IconButton(
             onPressed: () {
@@ -69,6 +70,7 @@ class _RecetaState extends State<Receta> {
       body: SingleChildScrollView(
           child: Column(
         children: [
+          
           Container(
               padding: EdgeInsets.all(30),
               child: Column(
@@ -81,6 +83,7 @@ class _RecetaState extends State<Receta> {
                     subtitle: Text(
                         "Dificultad: " + recetas[widget.index]["dificultad"]),
                   ),
+                  
                   Image.asset(recetas[widget.index]["imagen"]),
                   Column(
                     children: [
@@ -91,33 +94,28 @@ class _RecetaState extends State<Receta> {
                         children: [
                           IconButton(
                             onPressed: () {
-                              if (totals <= 4) {
-                                totals++;
-                              }
-                            },
-                            icon: Icon(Icons.add),
-                          ),
-                          IconButton(
-                            onPressed: () {
                               if (totals >= 2) {
                                 totals--;
                               }
                             },
                             icon: Icon(Icons.remove),
                           ),
+                          IconButton(
+                            onPressed: () {
+                              if (totals <= 4) {
+                                totals++;
+                              }
+                            },
+                            icon: Icon(Icons.add),
+                          ),
                           Text('Para ${totals} '),
                           Icon(Icons.person),
-                            RaisedButton(
-                            child: Text("CURSOS EN LINEA"),
-                              onPressed: (){
-                            launch("https://es.wikipedia.org/wiki/Ma%C3%ADz_dulce"); // crear json para link
-                          }),
                         ],
                       ),
                     ],
                   ),
                   Container(
-                    height: 230,
+                    height: 450,
                     child: ListView.builder(
                       physics: NeverScrollableScrollPhysics(),
                       itemCount: cu.length,
@@ -130,7 +128,12 @@ class _RecetaState extends State<Receta> {
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Icon(Icons.ac_unit_outlined),
+                                    IconButton(
+                                      onPressed: () {
+                                        launch(cu[index]["link"]);
+                                      },
+                                      icon: Icon(Icons.shopping_cart_outlined),
+                                    )
                                   ],
                                 ),
                                 Expanded(
@@ -152,7 +155,7 @@ class _RecetaState extends State<Receta> {
                                 )),
                                 Expanded(
                                     child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.end,
                                   children: [
                                     Text(
                                         ("   " + cu[index]["tipo"]).toString()),
@@ -168,15 +171,17 @@ class _RecetaState extends State<Receta> {
                 ],
               )),
           Container(
-              height: 2000,
+              height: 1200,
+              margin: EdgeInsets.fromLTRB(40, 0, 40, 0),
               child: ListView.builder(
-                physics: NeverScrollableScrollPhysics(),
+                // physics: NeverScrollableScrollPhysics(),
                 itemCount: pasos.length,
                 itemBuilder: (BuildContext context, int index) {
                   checkFalse[
                       index]; // le pasamos el index es decir todas las posiciones para  utilizarlas
                   return Container(
-                    padding: EdgeInsets.all(10),
+                    padding: EdgeInsets.all(20),
+                    // width: EdgeInsets.all(20);
                     child: Column(
                       children: [
                         SizedBox(
@@ -186,8 +191,12 @@ class _RecetaState extends State<Receta> {
                           thickness: 5,
                         ),
                         Text(
-                          "  paso " + '${index + 1}\n' + pasos[index]["paso"],
-                          textScaleFactor: 1.2,
+                          ' Paso: ${index}',
+                          textScaleFactor: 1.7,
+                        ),
+                        Text(
+                          pasos[index]["paso"],
+                          textScaleFactor: 1.3,
                         ),
                         Checkbox(
                           checkColor: Colors.white,
@@ -205,9 +214,54 @@ class _RecetaState extends State<Receta> {
                   );
                 },
               )),
+          ListTile(
+            
+            title: Text("OTRAS RECETAS", textScaleFactor: 1.8,),
+          ),
+          Column(
+            children: [
+              if (recetas.isNotEmpty)
+                SizedBox(
+                  height: 500,
+                  width: 500,
+                  child: PageView.builder(
+                      controller: PageController(viewportFraction: 1.1),
+                      itemCount: recetas.length,
+                      itemBuilder: (context, index) {
+                        return Card(
+                          margin: EdgeInsets.fromLTRB(40, 40, 40, 0),
+                          child: InkWell(
+                            onTap: () {
+                              final router = MaterialPageRoute(
+                                builder: (context) {
+                                  return new Receta(index);
+                                },
+                              );
+                              Navigator.push(context, router);
+                            },
+                            child: Column(
+                              children: [
+                                ListTile(
+                                  title: Text(recetas[index]["nombre"]),
+                                  subtitle: Text(recetas[index]["dificultad"]),
+                                ),
+                                Column(
+                                  children: [
+                                    Image.asset(
+                                      recetas[index]["imagen"],
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        );
+                      }),
+                )
+            ],
+          ),
         ],
       )),
     );
-    
   }
 }
