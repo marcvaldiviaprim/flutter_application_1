@@ -20,4 +20,5 @@ Depends on all your plugins, and provides a function to register them.
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
   s.dependency 'Flutter'
   s.dependency 'url_launcher_ios'
+  s.dependency 'video_player'
 end

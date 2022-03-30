@@ -1,13 +1,13 @@
-import 'dart:convert';
 
+// importamos las librerias necesarias
+import 'dart:convert'; 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'PageRecetas.dart';
 
- bool _isDark = false;
- bool cambio =false;
+ bool _isDark = false; // methodo para saber si esta modo oscuro o no
+ 
 
 class miApp extends StatelessWidget {
   
@@ -15,7 +15,7 @@ class miApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp( 
+    return MaterialApp(  // creamos un materialApp
       title: "App de rectas", 
       debugShowCheckedModeBanner: false,
       color: Colors.red,
@@ -32,8 +32,8 @@ class inicio extends StatefulWidget {
   State<inicio> createState() => _inicioState();
 }
 
-class _inicioState extends State<inicio> {
-    
+class _inicioState extends State<inicio> { 
+    // para cambiar el thema cremoas un themedata que sea modo oscuro y light con sus colores.
 
   ThemeData _light = ThemeData.light().copyWith(
     primaryColor: Colors.green,
@@ -41,36 +41,36 @@ class _inicioState extends State<inicio> {
   ThemeData _dark = ThemeData.dark().copyWith(
     primaryColor: Colors.blueGrey,
   );
-     
-
-
-  List recetas = [];
-  Future<void> readJson() async {
-    final String resultado = await rootBundle.loadString("assets/Recetas.json");
-    final data = await jsonDecode(resultado);
+  List recetas = []; // creamos una lista recetas para el json
+  
+  Future<void> readJson() async { // cremos un future para leer el json
+    final String resultado = await rootBundle.loadString("assets/Recetas.json"); // archivo donde esta el json
+    final data = await jsonDecode(resultado); // descodificamos el json
     setState(() {
-      recetas = data["recetas"];
+      recetas = data["recetas"]; // guardamos el resultado de la descodificacion del json a una variable recetas el 
+      // Data["recetas"] coge el valor de recetas es decir todo el json
+
       
     });
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) { 
     readJson();
 
-    return MaterialApp(
-       darkTheme: _dark,
-      theme: _light,
-      themeMode: _isDark ? ThemeMode.dark : ThemeMode.light,      
+    return MaterialApp( // creamos un materialApp
+       darkTheme: _dark, // le decimos si es modo oscuro o 
+      theme: _light,// modo normal "sin modo oscuro" 
+      themeMode: _isDark ? ThemeMode.dark : ThemeMode.light, // cambiamos si es true la variable _isDark si esta en un modo o en otro
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
+      home: Scaffold( // creamos un scaffold con un appbar
       
       appBar: AppBar(
-        backgroundColor: Colors.green[400],
+        backgroundColor: Colors.green[400], // añadimos color
     
-        title: Text("Recetas"),
+        title: Text("Recetas"), 
         actions: [
-      
+          // en esta funcion se cambia el valor de true a false el _isDark con un botton
             CupertinoSwitch(
                   value: _isDark,
                   onChanged: (v) {
@@ -83,38 +83,38 @@ class _inicioState extends State<inicio> {
         
       ),
    
-      body: Column(
-        children: [
+      body: Column( // aqui esta todo el cuerpo de la pagina 
+        children: [ // creamos un children para poder crear diferentes widgets dentro de column
           
-          if (recetas.isNotEmpty)
+          if (recetas.isNotEmpty) // mientras no sea null repitelo 
             Expanded(
-              child: ListView.builder(
-                  itemCount: recetas.length,
-                  itemBuilder: (context, index) {
+              child: ListView.builder( // creamos un linstViewBuilder para que si hay muchas cards no se corte la imagen 
+                  itemCount: recetas.length, // tiene 2 valores obligatorios itemCount y itemBuilder
+                  // recetas.lenght miramos la largada que tiene recetas si tiene 4 repetira 4 veces 
+                  itemBuilder: (context, index) { // le pasamos un context y un index para saber la posicion que esta repitiendo index = 0 , 1, 2, 3 ejemplo 
                     return Card(
-                      color: Colors.green[400],
-                      shape: RoundedRectangleBorder(
+                      color: Colors.green[400], // le damos colores a la card
+                      shape: RoundedRectangleBorder( // con borde redondo
                       borderRadius: BorderRadius.circular(20)),
-                      margin: EdgeInsets.fromLTRB(40, 15, 40, 0),                       
-                      child: InkWell(
-                           splashColor: Colors.blue[200],
-                        onTap: () {
-                        final router = MaterialPageRoute(
+                      margin: EdgeInsets.fromLTRB(40, 15, 40, 0), //un margen Left top right buttom                   
+                      child: InkWell( // un inkWell para poder hacer click en la targeta
+                           splashColor: Colors.blue[200], // añadimos un color cuando estas punsando
+                        onTap: () { // funcion para clicar
+                        final router = MaterialPageRoute( // para redirigir a Receta
                           builder:(context){
-                            return new Receta(index);
+                            return new Receta(index); // aqui estamos creando una receta y le pasamos el index para poder saber que receta hay que mostrar
                         },
                         );
                         Navigator.push(context, router);
                         },
                         child: Column(
                           children: [
-                            ListTile(
-                              title: Text(recetas[index]["nombre"]),
-                              subtitle: Text(recetas[index]["dificultad"]),
+                            ListTile( //list que creamos contiene el json descodificado.
+                              title: Text(recetas[index]["nombre"]), // recogemos el index que al ser la pimera vez sera 0 y recoge el nombre del json
+                              subtitle: Text( "Dificultad: " + recetas[index]["dificultad"]), // lo mismo con dificultad
                             ),
                             Column(
                               children: [
-                                
                                 Image.asset(recetas[index]["imagen"],),                                
                               ],
                             ),
