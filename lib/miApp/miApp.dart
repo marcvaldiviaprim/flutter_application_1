@@ -1,6 +1,7 @@
 
 // importamos las librerias necesarias
-import 'dart:convert'; 
+import 'dart:convert';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -36,10 +37,10 @@ class _inicioState extends State<inicio> {
     // para cambiar el thema cremoas un themedata que sea modo oscuro y light con sus colores.
 
   ThemeData _light = ThemeData.light().copyWith(
-    primaryColor: Colors.green,
+    primaryColor: Colors.green[400],
   );
   ThemeData _dark = ThemeData.dark().copyWith(
-    primaryColor: Colors.blueGrey,
+    primaryColor: Colors.red,
   );
   List recetas = []; // creamos una lista recetas para el json
   
@@ -100,14 +101,15 @@ class _inicioState extends State<inicio> {
                       child: InkWell( // un inkWell para poder hacer click en la targeta
                            splashColor: Colors.blue[200], // añadimos un color cuando estas punsando
                         onTap: () { // funcion para clicar
-                        final router = MaterialPageRoute( // para redirigir a Receta
-                          builder:(context){
-                            return new Receta(index); // aqui estamos creando una receta y le pasamos el index para poder saber que receta hay que mostrar
+                        Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => Receta(index),
+                                  ),
+                                ); // aqui estamos creando una receta y le pasamos el index para poder saber que receta hay que mostrar
                         },
-                        );
-                        Navigator.push(context, router);
-                        },
-                        child: Column(
+                        child: 
+                           Column(
                           children: [
                             ListTile( //list que creamos contiene el json descodificado.
                               title: Text(recetas[index]["nombre"]), // recogemos el index que al ser la pimera vez sera 0 y recoge el nombre del json
@@ -121,10 +123,12 @@ class _inicioState extends State<inicio> {
                             
                           ],
                         ),
+
+                        ));
+                        },
+                     
                       ),
-                    );
-                  }),
-            )
+                    )
         ],
       ),
       )

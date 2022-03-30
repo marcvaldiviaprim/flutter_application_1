@@ -6,15 +6,15 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:video_player/video_player.dart';
-
 import 'miApp.dart';
 
 int totals = 1;
 bool isChecked = false;
 
 class Receta extends StatefulWidget {
-  int index;
-  Receta(this.index,); // recogemos el index que le pasamos de miApp
+  final int index;
+  
+  const Receta(this.index); // recogemos el index que le pasamos de miApp
 
   @override
   State<Receta> createState() => _RecetaState();
@@ -28,12 +28,14 @@ class _RecetaState extends State<Receta> {
   List<bool> checkFalse = []; // creamos un array
   bool mostrarVideo = false;
   bool mostrarFoto = true;
+  
 
   late VideoPlayerController _controller;
 
   @override
   void initState() {
-    super.initState();
+    
+    
     _controller = VideoPlayerController.asset('assets/mi.mp4');
 
     _controller.addListener(() {
@@ -56,8 +58,10 @@ class _RecetaState extends State<Receta> {
     final data = await jsonDecode(resultado);
     setState(() {
       recetas = data["recetas"];
-      ingredientes = data["recetas"][widget.index]["ingredientes"];
-      pasos = data["recetas"][widget.index]["Elaboracion"];
+      ingredientes = data["recetas"][widget.index]["ingredientes"]; // accede a la descodificacion del json que se llama data 
+      // y accede al array de recetas en la posicion que le indicamos y dentro de esta posicion esta ingredientes que nos permite acceder a los ingredientes 
+      // que mostramos en pantalla a los "hijos de ingredientes"
+      pasos = data["recetas"][widget.index]["Elaboracion"]; // lo mismo que ingredientes pero con elaboracion
       checkFalse.add(false); // añadimos todos los valores a false
     });
   }
@@ -100,7 +104,7 @@ class _RecetaState extends State<Receta> {
                       recetas[widget.index]["nombre"],
                     ),
                     subtitle: Text(
-                        "Difiingredientesltad: " + recetas[widget.index]["difiingredientesltad"]), 
+                        "dificultad: " + recetas[widget.index]["dificultad"]), 
                   ),
                   Column(
                     children: [
@@ -126,13 +130,28 @@ class _RecetaState extends State<Receta> {
                                 ),
                               ),
                             ),
+                            Row(
+                              children: [
+
                              IconButton(
                           onPressed: () { // icono para poder ocultar el video y que se muestre la foto 
                             mostrarVideo = false;
                             mostrarFoto = true;
                             _controller.pause(); // para no reproducir el video en segundo plano
                           },
-                          icon: Icon(Icons.play_arrow)),
+                          icon: Icon(Icons.exit_to_app)),
+                           IconButton(
+                          onPressed: () { // Pause
+                            _controller.pause(); // para no reproducir el video en segundo plano
+                          },
+                          icon: Icon(Icons.pause)),
+                             IconButton(
+                          onPressed: () { // Play
+                            _controller.play(); // para no reproducir el video en segundo plano
+                          },
+                          icon: Icon(Icons.play_arrow_outlined)),
+                              ],
+                            )
                           ],
                           
                         ),
@@ -157,10 +176,11 @@ class _RecetaState extends State<Receta> {
                       Column(
                         children: [
                           ListTile(
+                            tileColor: Colors.green[200],
                             title: Text("INGREDIENTES"),
                           ),
                           Row(
-                            children: [
+                            children: [ // mientras le des clik va a restar una variable para poder multiplicar el resultado 
                               IconButton(
                                 onPressed: () {
                                   if (totals >= 2) {
@@ -169,7 +189,7 @@ class _RecetaState extends State<Receta> {
                                 },
                                 icon: Icon(Icons.remove),
                               ),
-                              IconButton(
+                              IconButton( // suma una variable hasta un maximo de 5
                                 onPressed: () {
                                   if (totals <= 4) {
                                     totals++;
@@ -177,31 +197,31 @@ class _RecetaState extends State<Receta> {
                                 },
                                 icon: Icon(Icons.add),
                               ),
-                              Text('Para ${totals} '),
-                              Icon(Icons.person),
+                              Text('Para ${totals} '),// mostramos el resultado para que el usuario sepa para cuantas personas son esas recetas
+                              Icon(Icons.person), 
                             ],
                           ),
                         ],
                       ),
                       Container(
-                        height: 450,
+                        height: 570,
                         child: ListView.builder(
                           physics: NeverScrollableScrollPhysics(),
                           itemCount: ingredientes.length,
-                          itemBuilder: (BuildContext context, int index) {
+                          itemBuilder: (BuildContext context, int index) { // es basicamente la misma funcion que miApp pero un poco diferente
                             return Column(
                               children: [
                                 Row(
                                   mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                      MainAxisAlignment.spaceBetween, // agregamos espacio
                                   children: [
                                     Column(
                                       crossAxisAlignment:
-                                          CrossAxisAlignment.start,
+                                          CrossAxisAlignment.start, //para que este al principio
                                       children: [
                                         IconButton(
                                           onPressed: () {
-                                            launch(ingredientes[index]["link"]);
+                                            launch(ingredientes[index]["link"]); // para que vaya a comprar el ingrediente con el icono
                                           },
                                           icon: Icon(
                                               Icons.shopping_cart_outlined),
@@ -211,9 +231,9 @@ class _RecetaState extends State<Receta> {
                                     Expanded(
                                       child: Column(
                                         crossAxisAlignment:
-                                            CrossAxisAlignment.start,
+                                            CrossAxisAlignment.start, // estarà al lado de el icon de comprar el ingrediente
                                         children: [
-                                          Text(ingredientes[index]["Nombre"]),
+                                          Text(ingredientes[index]["Nombre"]), // mostramos el nombre del ingrediente.
                                         ],
                                       ),
                                     ),
@@ -320,7 +340,7 @@ class _RecetaState extends State<Receta> {
                                         ListTile(
                                           title: Text(recetas[index]["nombre"]),
                                           subtitle: Text(
-                                              recetas[index]["difiingredientesltad"]),
+                                              recetas[index]["dificultad"]),
                                         ),
                                         Column(
                                           children: [
